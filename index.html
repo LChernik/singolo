@@ -8,35 +8,44 @@
 </head>
 <body>
    <!--SINGOLO1 START-->   
-   <div class="header-zone">
+   <div class="header-zone sticky" id="header">
       <div class="container">
          <div class="header-1">
             <div class="header-2">
                <h1 class="logotype">SINGOLO<span>*</span></h1>
             </div>
             <div class="nav">
-               <ul>
-                     <li>home</li>
-                     <li>services</li>
-                     <li>portfolio</li>
-                     <li>about</li>
-                     <li>contact</li>
+               <ul id="menu">
+                     <li class="active"><a href="#home">home</a></li>
+                     <li><a href="#services">services</a></li>
+                     <li><a href="#portfolio">portfolio</a></li>
+                     <li><a href="#about">about</a></li>
+                     <li><a href="#contact">contact</a></li>
                </ul>
             </div>
          </div>
       </div>
    </div>
-   <div class="body-zone">
-      <div class="container">
-         <div class="slider">
-               <img src="assets/images/arrow_left.svg" id="arrow_left" alt="navigation">
-               <img src="assets/images/iPhone Vertical.png" id="iPhoneVertical" alt="iPhoneVertical">
-               <img src="assets/images/iPhone Horizontal.png" id="iPhoneHorizontal" alt="iPhoneHorizontal">
-               <img src="assets/images/arrow_right.svg" id="arrow_right" alt="navigation">
-         </div>
+   <div>
+      <div class="anchor container" id="home">
+               <img src="assets/images/arrow_left.svg" id="arrow_left" alt="navigation" onclick="plusSlides(-1)">
+               <img src="assets/images/arrow_right.svg" id="arrow_right" alt="navigation" onclick="plusSlides(1)">
+               <div class="mySlides redZone fade scroll-zone">
+                    <div class="offscreen offscreen1" style="display: none;"></div>
+                    <div class="offscreen offscreen2" style="display: none"></div>
+                    <div class="iphone-button iphone-button1"></div>
+                    <div class="iphone-button iphone-button2"></div>
+                    <img src="assets/images/iPhone Vertical.png" id="iPhoneVertical" alt="iPhoneVertical">
+                    <img src="assets/images/iPhone Horizontal.png" id="iPhoneHorizontal" alt="iPhoneHorizontal">
+               </div>
+               <div class="mySlides blueZone fade scroll-zone">
+                    <div class="offscreen offscreen3" style="display: none;"></div>
+                    <div class="iphone-button iphone-button3"></div>
+                    <img src="assets/images/slide2.png" id="slide2" alt="slide2">
+               </div>
       </div>
    </div>
-   <div class="footer-zone">
+   <div class="anchor footer-zone" id="services">
       <div class="container">
          <div class="our-services">
             <h3>Our Services</h3>
@@ -111,18 +120,18 @@
    <!--SINGOLO1 END-->
 
    <!--SINGOLO2 START-->
-   <div class="portfolio-zone">    
+   <div class="anchor portfolio-zone" id="portfolio">    
       <div class="container">
           <div class="portfolio">
               <h1>Portfolio</h1>
               <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
           </div>
           <nav>
-              <div class="tabs">
-                  <button>All</button>
-                  <button>Web Design</button>
-                  <button>Graphic Design</button>
-                  <button>Artwork</button>
+              <div class="tabs" id="portfolio-menu">
+                  <button class="active">All</button>
+                  <button class="">Web Design</button>
+                  <button class="">Graphic Design</button>
+                  <button class="">Artwork</button>
               </div>
           </nav>
       <div class="gallery">
@@ -151,7 +160,7 @@
           </div>
       </div>
   </div>
-  <div class="portfolio-footer-zone">  
+  <div class="anchor portfolio-footer-zone" id="about">  
       <div class="portfolio-footer container">
          <div class="about">
              <h1>About Us</h1>
@@ -199,7 +208,7 @@
    <!--SINGOLO2 END-->
 
    <!--SINGOLO3 START-->
-   <section class="body-area"> 
+   <section class="anchor body-area" id="contact"> 
         <div class="container">  
                <div class="get-quote">
                    <h1>Get a Quote</h1>
@@ -257,6 +266,6 @@
              </div>
       </section>
    <!--SINGOLO3 END-->
-
+   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
